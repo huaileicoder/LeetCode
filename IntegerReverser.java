@@ -1,10 +1,7 @@
 package leetcode.LeetCode;
 
 public class IntegerReverser {
-    public static void main(String[] args) {
-        System.out.println(reverse(-12340));
-    }
-
+    
     public static int reverse(int x) {
         boolean isNegative = x < 0;
         String xString = String.valueOf(x);
