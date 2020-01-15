@@ -3,7 +3,7 @@ package leetcode.LeetCode;
 public class PalindromeNumber {
 
     public static void main(String[] args) {
-        int x = -121;
+        int x = 121;
         System.out.println(isPalindrome(x));
     }
 
@@ -12,11 +12,9 @@ public class PalindromeNumber {
             return false;
         }
         int temp = x;
-        int result;
-        int divisor = temp / 10;
-        int remainder = temp % 10;
-        result = remainder;
-        temp = divisor;
+        int result = 0;
+        int divisor;
+        int remainder;
         while (temp > 0) {
             divisor = temp / 10;
             remainder = temp % 10;
