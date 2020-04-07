@@ -6,7 +6,7 @@ public class Partition {
         System.err.println(findPartition(arr, arr.length));
     }
 
-    public static boolean findPartition(int[] arr, int n) {
+    private static boolean findPartition(int[] arr, int n) {
         if (n <= 1) {
             return false;
         }
@@ -24,11 +24,10 @@ public class Partition {
         for (int i = 1; i <= sum / 2; i++) {
             for (int j = 1; j <= n; j++) {
                 if (i >= arr[j - 1]) {
-                    part[i][j] = part[i][j - 1] || part[i - arr[j - 1]][j - 1];
+                    part[i][j] = part[i - arr[j - 1]][j - 1];
                 } else {
                     part[i][j] = part[i][j - 1];
                 }
-                System.out.println("i="+i+",j="+j+",part="+part[i][j]);
             }
         }
         return part[sum / 2][n];

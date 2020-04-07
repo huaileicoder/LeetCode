@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.LeetCode;
 
 import java.util.*;
 import java.util.function.BiFunction;

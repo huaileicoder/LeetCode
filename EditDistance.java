@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.LeetCode;
 
 public class EditDistance {
     public static void main(String[] args) {
