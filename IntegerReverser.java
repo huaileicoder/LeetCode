@@ -1,4 +1,4 @@
-package leetcode.LeetCode;
+package leetcode;
 
 public class IntegerReverser {
     

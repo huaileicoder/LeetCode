@@ -1,4 +1,4 @@
-package leetcode.LeetCode;
+package leetcode;
 
 public class RomanToIntTest {
     public static void main(String[] args) {
