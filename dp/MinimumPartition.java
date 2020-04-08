@@ -1,4 +1,4 @@
-package leetcode.LeetCode;
+package leetcode.LeetCode.dp;
 
 public class MinimumPartition {
     public static void main(String[] args) {
