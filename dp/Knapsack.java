@@ -10,12 +10,8 @@ public class Knapsack {
 
     private static int findMax(int[] val, int[] wt, int capacity) {
         int[][] result = new int[val.length + 1][capacity + 1];
-        for (int i = 0; i <= val.length; i++) {
-            for (int j = 0; j <= capacity; j++) {
-                if (i == 0 || j == 0) {
-                    result[i][j] = 0;
-                    continue;
-                }
+        for (int i = 1; i <= val.length; i++) {
+            for (int j = 1; j <= capacity; j++) {
                 if (wt[i - 1] <= j) {
                     result[i][j] = Math.max(val[i - 1] + result[i - 1][j - wt[i - 1]], result[i - 1][j]);
                 } else {
