@@ -24,7 +24,7 @@ public class Partition {
         for (int i = 1; i <= sum / 2; i++) {
             for (int j = 1; j <= n; j++) {
                 if (i >= arr[j - 1]) {
-                    part[i][j] = part[i - arr[j - 1]][j - 1];
+                    part[i][j] = part[i - arr[j - 1]][j - 1] || part[i][j - 1];
                 } else {
                     part[i][j] = part[i][j - 1];
                 }

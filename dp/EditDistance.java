@@ -11,7 +11,7 @@ public class EditDistance {
      * convert to lcs
      * time complexity equip to lcs
      */
-    public static int moe(char[] x, char[] y, int m, int n) {
+    private static int moe(char[] x, char[] y, int m, int n) {
         if (m == 0 && n == 0) {
             return 0;
         }
