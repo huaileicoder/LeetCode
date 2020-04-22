@@ -1,6 +1,6 @@
 package leetcode.LeetCode.test;
 
-import leetcode.LeetCode.SinglyLinkedList;
+import leetcode.LeetCode.datastructure.SinglyLinkedList;
 
 import java.util.ArrayList;
 import java.util.Collection;
