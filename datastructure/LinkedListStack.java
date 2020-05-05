@@ -1,4 +1,4 @@
-package leetcode.LeetCode.datastructure;
+package leetcode.datastructure;
 
 public class LinkedListStack<E> implements Stack<E> {
     private SinglyLinkedList<E> linkedList;

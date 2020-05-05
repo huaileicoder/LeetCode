@@ -1,4 +1,4 @@
-package leetcode.LeetCode.datastructure;
+package leetcode.datastructure;
 
 public class FixSortedArray {
     private int[] elements;
@@ -26,6 +26,13 @@ public class FixSortedArray {
         moveElementLeftOne(index + 1);
         count--;
         return r;
+    }
+
+    public int get(int index) {
+        if (index < 0 || index >= elements.length) {
+            throw new ArrayIndexOutOfBoundsException(index);
+        }
+        return elements[index];
     }
 
     public void printAll() {
@@ -69,4 +76,7 @@ public class FixSortedArray {
         elements[elements.length - 1] = 0;
     }
 
+    public int getCount() {
+        return count;
+    }
 }

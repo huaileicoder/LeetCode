@@ -1,4 +1,4 @@
-package leetcode.LeetCode.datastructure;
+package leetcode.datastructure;
 
 import java.util.Collection;
 import java.util.NoSuchElementException;
