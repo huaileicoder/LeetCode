@@ -1,4 +1,4 @@
-package leetcode.LeetCode.dp;
+package leetcode.dp;
 
 import java.util.HashMap;
 import java.util.HashSet;

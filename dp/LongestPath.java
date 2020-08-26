@@ -1,4 +1,4 @@
-package leetcode.LeetCode.dp;
+package leetcode.dp;
 
 public class LongestPath {
     public static void main(String[] args) {
