@@ -1,6 +1,6 @@
-package leetcode.test;
+package test;
 
-import leetcode.datastructure.CircularArrayQueue;
+import datastructure.CircularArrayQueue;
 
 public class ArrayQueueTest {
     public static void main(String[] args) {

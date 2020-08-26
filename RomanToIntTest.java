@@ -1,5 +1,3 @@
-package leetcode.LeetCode;
-
 public class RomanToIntTest {
     public static void main(String[] args) {
         String roman = "MCDLXXVI";

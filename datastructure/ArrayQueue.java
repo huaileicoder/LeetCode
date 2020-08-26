@@ -1,4 +1,4 @@
-package leetcode.datastructure;
+package datastructure;
 
 
 public class ArrayQueue<E> implements Queue<E> {
