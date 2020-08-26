@@ -1,4 +1,4 @@
-package leetcode.sort;
+package sort;
 
 public class QuickSorter {
     public static void main(String[] args) {

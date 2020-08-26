@@ -1,4 +1,4 @@
-package leetcode.datastructure;
+package datastructure;
 
 public class CircularArrayQueue<E> implements Queue<E> {
     private Object[] items;

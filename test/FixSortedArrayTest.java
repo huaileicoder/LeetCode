@@ -1,6 +1,6 @@
-package leetcode.test;
+package test;
 
-import leetcode.datastructure.FixSortedArray;
+import datastructure.FixSortedArray;
 
 public class FixSortedArrayTest {
     public static void main(String[] args) {

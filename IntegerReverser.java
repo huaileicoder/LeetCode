@@ -1,5 +1,3 @@
-package leetcode.LeetCode;
-
 public class IntegerReverser {
     
     public static int reverse(int x) {

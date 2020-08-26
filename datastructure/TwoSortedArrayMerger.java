@@ -1,4 +1,4 @@
-package leetcode.datastructure;
+package datastructure;
 
 public class TwoSortedArrayMerger {
     public static void main(String[] args) {

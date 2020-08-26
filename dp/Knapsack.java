@@ -1,5 +1,8 @@
 package leetcode.dp;
 
+/**
+ * 背包
+ */
 public class Knapsack {
     public static void main(String[] args) {
         int[] val = new int[]{60, 100, 120};
