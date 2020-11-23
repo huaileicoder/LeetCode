@@ -9,7 +9,7 @@ package array;
 public class RemoveDuplicate {
 
     public static void main(String[] args) {
-        int[] nums = {1, 1, 2, 2, 3};
+        int[] nums = {1, 2, 2, 2, 3};
         System.out.println(removeDuplicates(nums));
     }
 
@@ -23,13 +23,16 @@ public class RemoveDuplicate {
             if (nums[rightIndex] == nums[leftIndex]) {
                 newArraySize--;
                 duplicateNum++;
-                rightIndex++;
                 if (duplicateNum <= 1) {
                     duplicateIndex = rightIndex;
                 }
+                rightIndex++;
             } else {
-                nums[duplicateIndex++] = nums[rightIndex++];
+                if (duplicateIndex > -1) {
+                    nums[duplicateIndex++] = nums[rightIndex];
+                }
                 leftIndex++;
+                rightIndex++;
             }
         }
 
