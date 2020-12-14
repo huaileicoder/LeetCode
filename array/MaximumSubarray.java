@@ -15,7 +15,9 @@ public class MaximumSubarray {
         for (int v : nums) {
             sum += v;
         }
-        int midSum = sum;
+        int midMaxSum = sum;
+        int leftMaxSum = 0;
+        int rightMaxSum = 0;
         int leftSum = 0;
         int rightSum = 0;
         int leftIndex = 0;
@@ -24,14 +26,19 @@ public class MaximumSubarray {
             int mLeftSum = sum - nums[rightIndex];
             int mRightSum = sum - nums[leftIndex];
             if (mLeftSum >= mRightSum) {
+                rightSum += nums[rightIndex];
+                rightMaxSum = Math.max(rightMaxSum, rightSum);
                 rightIndex--;
             } else {
+                leftSum += nums[leftIndex];
+                leftMaxSum = Math.max(leftMaxSum, leftSum);
                 leftIndex++;
             }
             sum = Math.max(mLeftSum, mRightSum);
-            midSum = Math.max(midSum, sum);
-            System.out.println("maxSum=" + midSum + ", sum=" + sum + ", leftIndex=" + leftIndex + ", rightIndex=" + rightIndex);
+            midMaxSum = Math.max(midMaxSum, sum);
+            System.out.println("maxSum=" + midMaxSum + ", sum=" + sum + ", leftIndex=" + leftIndex + ", rightIndex=" + rightIndex +
+                    ", leftMaxSum" + leftMaxSum + ", rightMaxSum=" + rightMaxSum);
         }
-        return Math.max(Math.max(leftSum, midSum), rightSum );
+        return Math.max(Math.max(leftMaxSum, midMaxSum), rightMaxSum);
     }
 }
