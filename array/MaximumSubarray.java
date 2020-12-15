@@ -11,34 +11,16 @@ public class MaximumSubarray {
     }
 
     private static int maxSubArray(int[] nums) {
-        int sum = 0;
-        for (int v : nums) {
-            sum += v;
+        /*
+        思路：从left end开始遍历，记录子数组的最大值max so far, 假设已知nums[0...i-1]的最大值，求nums[0...i]的最大值即等于
+        max(nums[0...i-1] + nums[i], nums[i]), maxEndingHere表示子数组最大值的end
+         */
+        int maxSoFar = nums[0];
+        int maxEndingHere = nums[0];
+        for (int i = 1; i < nums.length; ++i) {
+            maxEndingHere = Math.max(maxEndingHere + nums[i], nums[i]);
+            maxSoFar = Math.max(maxSoFar, maxEndingHere);
         }
-        int midMaxSum = sum;
-        int leftMaxSum = 0;
-        int rightMaxSum = 0;
-        int leftSum = 0;
-        int rightSum = 0;
-        int leftIndex = 0;
-        int rightIndex = nums.length - 1;
-        while (leftIndex < rightIndex) {
-            int mLeftSum = sum - nums[rightIndex];
-            int mRightSum = sum - nums[leftIndex];
-            if (mLeftSum >= mRightSum) {
-                rightSum += nums[rightIndex];
-                rightMaxSum = Math.max(rightMaxSum, rightSum);
-                rightIndex--;
-            } else {
-                leftSum += nums[leftIndex];
-                leftMaxSum = Math.max(leftMaxSum, leftSum);
-                leftIndex++;
-            }
-            sum = Math.max(mLeftSum, mRightSum);
-            midMaxSum = Math.max(midMaxSum, sum);
-            System.out.println("maxSum=" + midMaxSum + ", sum=" + sum + ", leftIndex=" + leftIndex + ", rightIndex=" + rightIndex +
-                    ", leftMaxSum" + leftMaxSum + ", rightMaxSum=" + rightMaxSum);
-        }
-        return Math.max(Math.max(leftMaxSum, midMaxSum), rightMaxSum);
+        return maxSoFar;
     }
 }
